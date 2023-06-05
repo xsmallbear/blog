@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
-    <link>/</link>
+    <link>https://bearcurb.blog/</link>
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 05 Jun 2023 11:38:36 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Jun 2023 11:38:36 +0800</lastBuildDate><atom:link href="https://bearcurb.blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux 避坑笔记</title>
-      <link>/posts/2023-06-05-linux/</link>
+      <link>https://bearcurb.blog/posts/2023-06-05-linux/</link>
       <pubDate>Mon, 05 Jun 2023 11:38:36 +0800</pubDate>
       
-      <guid>/posts/2023-06-05-linux/</guid>
+      <guid>https://bearcurb.blog/posts/2023-06-05-linux/</guid>
       <description>源 apt官方软件源位于/etc/apt/sources.list下
 cat /etc/apt/sources.list | grep -v &amp;quot;#&amp;quot; 查看过滤过注释的源列表
 USTC Mirror 网站

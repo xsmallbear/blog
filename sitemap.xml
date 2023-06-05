@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
+    <loc>https://bearcurb.blog/</loc>
     <lastmod>2023-06-05T11:38:36+08:00</lastmod>
   </url><url>
-    <loc>/tags/linux/</loc>
+    <loc>https://bearcurb.blog/tags/linux/</loc>
     <lastmod>2023-06-05T11:38:36+08:00</lastmod>
   </url><url>
-    <loc>/posts/2023-06-05-linux/</loc>
+    <loc>https://bearcurb.blog/posts/2023-06-05-linux/</loc>
     <lastmod>2023-06-05T11:38:36+08:00</lastmod>
   </url><url>
-    <loc>/posts/</loc>
+    <loc>https://bearcurb.blog/posts/</loc>
     <lastmod>2023-06-05T11:38:36+08:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://bearcurb.blog/tags/</loc>
     <lastmod>2023-06-05T11:38:36+08:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://bearcurb.blog/categories/</loc>
   </url>
 </urlset>
