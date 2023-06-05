@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on </title>
+    <link>http://bearcurb.blog/posts/</link>
+    <description>Recent content in Posts on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 05 Jun 2023 11:38:36 +0800</lastBuildDate><atom:link href="http://bearcurb.blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux 避坑笔记</title>
+      <link>http://bearcurb.blog/posts/2023-06-05-linux/</link>
+      <pubDate>Mon, 05 Jun 2023 11:38:36 +0800</pubDate>
+      
+      <guid>http://bearcurb.blog/posts/2023-06-05-linux/</guid>
+      <description>源 apt官方软件源位于/etc/apt/sources.list下
+cat /etc/apt/sources.list | grep -v &amp;quot;#&amp;quot; 查看过滤过注释的源列表
+USTC Mirror 网站
+sudo sed -i &amp;#39;s/deb.debian.org/mirrors.ustc.edu.cn/g&amp;#39; /etc/apt/sources.list 更改完 sources.list 文件后运行 sudo apt-get update 更新索引以生效。
+查看文件内容 cat FILE 输出文件的全部内容
+cat FILE1 FILE2 连接两个文件并输出
+less FILE 使用less翻页器显示文件内容
+less快捷键
+按键 效果 d/u 向下/上滚动半页（down/up） f/d 向下/上滚动一整页（forward/back） g / G 跳转到文件开头/结尾 j 向下移动一行 k 向上移动一行 /PATTERN 在文件中搜索 PATTERN n / N 跳转到下一个/上一个找到的 PATTERN q 退出 进程标识符(PID) 进程标识符(PID, Process Identifier)是一个数字,要对进程做任意操作需要使用这个PID nice和PRI nice 操作系统调度线程的优先程度 priority 操作系统内部使用的调度标志 $ nice -10 vim #use 10 nice run vim $ renice -n 10 -p 12345 # 设置pid12345的线程nice为-10 进程状态 Status: R: running #正在跑 S: sleeping #可以被中断的睡眠 T: traced/stopped #被跟踪/挂起的进程 Z: zombie #僵尸进程 D: disk sleep #不能被中断的睡眠 前后台切换 Ctrl+z 把程序挂在后台暂停执行</description>
+    </item>
+    
+  </channel>
+</rss>

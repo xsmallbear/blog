@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #08F;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Linux 避坑笔记</title>
+    <meta name="description" content="Hello, world!">
+    <meta name="keywords" content='linux'>
+
+    <meta property="og:url" content="http://bearcurb.blog/posts/2023-06-05-linux/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Linux 避坑笔记">
+    <meta property="og:description" content="Hello, world!">
+    <meta property="og:image" content="http://bearcurb.blog/images/avatar.png">
+    <meta property="og:image:secure_url" content="http://bearcurb.blog/images/avatar.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Linux 避坑笔记">
+    <meta name="twitter:description" content="Hello, world!">
+    <meta property="twitter:domain" content="http://bearcurb.blog/posts/2023-06-05-linux/">
+    <meta property="twitter:url" content="http://bearcurb.blog/posts/2023-06-05-linux/">
+    <meta name="twitter:image" content="http://bearcurb.blog/images/avatar.png">
+
+    
+    <link rel="canonical" href="http://bearcurb.blog/posts/2023-06-05-linux/" />
+
+    <link rel="stylesheet" type="text/css" href="http://bearcurb.blog//css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="http://bearcurb.blog//css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="http://bearcurb.blog//css/dark.css">
+
+    <script src="http://bearcurb.blog//js/svg-injector.min.js"></script>
+    <script src="http://bearcurb.blog//js/feather-icons.min.js"></script>
+    <script src="http://bearcurb.blog//js/main.js"></script>
+
+    
+    
+    <script> const title = '小熊的博客'; const emojis = ['🐻', '🐻‍❄️', '🐼', '🦝', '🧸']; let visible = false; let emojisIndex = 0; let currentTile = title + emojis[emojisIndex];
+document.title = currentTile; document.addEventListener('visibilitychange', ()=>{ document.visibilityState === 'visible' ? document.title = currentTile : document.title = '快看我 快看我' }); document.addEventListener('visibilitychange', ()=>{ document.visibilityState === 'visible' ? visible = true : visible = false });
+setInterval(()=>{ if(emojisIndex >= emojis.length - 1){ emojisIndex = 0; } emojisIndex++; currentTile = title + emojis[emojisIndex]; if(visible) document.title = currentTile; }, 1000); </script>
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://bearcurb.blog/">
+                <img src="http://bearcurb.blog//images/avatar.png" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://bearcurb.blog/"></a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://bearcurb.blog/"> 主页 </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://bearcurb.blog/posts/"> 归档 </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://bearcurb.blog/tags/"> 标签 </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://bearcurb.blog/index.xml"><span data-feather='rss'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://bearcurb.blog/"> 主页 </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://bearcurb.blog/posts/"> 归档 </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://bearcurb.blog/tags/"> 标签 </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://bearcurb.blog/index.xml"><span data-feather='rss'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Linux 避坑笔记</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            June 5, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="http://bearcurb.blog/tags/linux">linux</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h1 id="源">源</h1>
+<p>apt官方软件源位于<code>/etc/apt/sources.list</code>下<br>
+<code>cat /etc/apt/sources.list | grep -v &quot;#&quot;</code> 查看过滤过注释的源列表</p>
+<p><a href="https://mirrors.ustc.edu.cn/help/debian.html#id5">USTC Mirror 网站</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo sed -i <span style="color:#e6db74">&#39;s/deb.debian.org/mirrors.ustc.edu.cn/g&#39;</span> /etc/apt/sources.list
+</span></span></code></pre></div><p>更改完 sources.list 文件后运行 <code>sudo apt-get update</code> 更新索引以生效。</p>
+<h1 id="查看文件内容">查看文件内容</h1>
+<p><code>cat FILE</code> 输出文件的全部内容<br>
+<code>cat FILE1 FILE2</code> 连接两个文件并输出<br>
+<code>less FILE</code> 使用less翻页器显示文件内容</p>
+<p>less快捷键</p>
+<table>
+<thead>
+<tr>
+<th>按键</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d/u</td>
+<td>向下/上滚动半页（down/up）</td>
+</tr>
+<tr>
+<td>f/d</td>
+<td>向下/上滚动一整页（forward/back）</td>
+</tr>
+<tr>
+<td>g / G</td>
+<td>跳转到文件开头/结尾</td>
+</tr>
+<tr>
+<td>j</td>
+<td>向下移动一行</td>
+</tr>
+<tr>
+<td>k</td>
+<td>向上移动一行</td>
+</tr>
+<tr>
+<td>/PATTERN</td>
+<td>在文件中搜索 PATTERN</td>
+</tr>
+<tr>
+<td>n / N</td>
+<td>跳转到下一个/上一个找到的 PATTERN</td>
+</tr>
+<tr>
+<td>q</td>
+<td>退出</td>
+</tr>
+</tbody>
+</table>
+<h1 id="进程标识符pid">进程标识符(PID)</h1>
+<ul>
+<li>进程标识符(PID, Process Identifier)是一个数字,要对进程做任意操作需要使用这个PID</li>
+</ul>
+<h1 id="nice和pri">nice和PRI</h1>
+<ul>
+<li>nice 操作系统调度线程的优先程度</li>
+<li>priority 操作系统内部使用的调度标志</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ nice -10 vim <span style="color:#75715e">#use 10 nice run vim</span>
+</span></span><span style="display:flex;"><span>$ renice -n <span style="color:#ae81ff">10</span> -p <span style="color:#ae81ff">12345</span> <span style="color:#75715e"># 设置pid12345的线程nice为-10</span>
+</span></span></code></pre></div><h1 id="进程状态">进程状态</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Status: 
+</span></span><span style="display:flex;"><span>R: running <span style="color:#75715e">#正在跑</span>
+</span></span><span style="display:flex;"><span>S: sleeping <span style="color:#75715e">#可以被中断的睡眠</span>
+</span></span><span style="display:flex;"><span>T: traced/stopped <span style="color:#75715e">#被跟踪/挂起的进程</span>
+</span></span><span style="display:flex;"><span>Z: zombie <span style="color:#75715e">#僵尸进程</span>
+</span></span><span style="display:flex;"><span>D: disk sleep <span style="color:#75715e">#不能被中断的睡眠</span>
+</span></span></code></pre></div><h1 id="前后台切换">前后台切换</h1>
+<p><strong>Ctrl+z</strong> 把程序挂在后台暂停执行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ jobs <span style="color:#75715e">#查看暂停在后台的任务</span>
+</span></span><span style="display:flex;"><span>$ <span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>    suspended  ping baidu.com
+</span></span><span style="display:flex;"><span>$ <span style="color:#f92672">[</span>2<span style="color:#f92672">]</span>  - suspended  vim
+</span></span><span style="display:flex;"><span>$ <span style="color:#f92672">[</span>3<span style="color:#f92672">]</span>  + suspended  htop
+</span></span><span style="display:flex;"><span>$ bg %2 <span style="color:#75715e">#让2号任务后台继续运行</span>
+</span></span><span style="display:flex;"><span>$ fg %3 <span style="color:#75715e">#让3号任务在前台继续执行</span>
+</span></span></code></pre></div><h1 id="进程信号">进程信号</h1>
+<p>htop中选择进程摁下k可以选择信号</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ kill <span style="color:#f92672">[</span>signal-number<span style="color:#f92672">]</span> PID <span style="color:#75715e">#如果没有参数会自动发送15 (SIGTERM)</span>
+</span></span></code></pre></div><h1 id="服务管理">服务管理</h1>
+<p>服务进程独立与用户的登入，不随用户的退出而被终止，这类工作与后台的进程称为守护进程(deamon)</p>
+<p><code>systemctl</code> 命令管理服务<br>
+<code>systemctl status</code> 预览系统服务运行情况<br>
+<code>systemctl list-units</code> 查看所有的服务内容</p>
+<h1 id="自定义服务">自定义服务</h1>
+<p>服务的配置文件们位于<code>/etc/systemd/system</code>下</p>
+<pre tabindex="0"><code class="language-conf" data-lang="conf">[Unit]
+Description=Jupyter Notebook    # 该服务的简要描述
+
+[Service]
+PIDFile=/run/jupyter.pid        # 用来存放 PID 的文件
+ExecStart=/usr/local/bin/jupyter-notebook --allow-root
+                                # 使用绝对路径标明的命令及命令行参数
+WorkingDirectory=/root          # 服务启动时的工作目录
+Restart=always                  # 重启模式，这里是无论因何退出都重启
+RestartSec=10                   # 退出后多少秒重启
+
+[Install]
+WantedBy=multi-user.target      # 依赖目标，这里指进入多用户模式后再启动该服务
+</code></pre><p>配置文件名称就是服务的名字<br>
+<code>systemctl start jupyter</code> 启动<br>
+<code>systemctl stop jupyter</code> 停止<br>
+<code>systemctl enable jupyter</code> 设置开机启动<br>
+<code>systemctl disable jupter</code> 取消开机启动</p>
+<h1 id="列行性任务">列行性任务</h1>
+<p><code>at</code>单次计划任务</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ at now + 1min
+</span></span><span style="display:flex;"><span>&gt; echo <span style="color:#e6db74">&#34;hello&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&gt; &lt;EOT&gt; （按下 Ctrl + D）
+</span></span></code></pre></div><p>at会将stdout和stderr的内容以邮件的方式发送给用户</p>
+<p><code>crontab </code>周期性计划任务</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 分 时 日 月 星期 命令</span>
+</span></span><span style="display:flex;"><span>* * * * * echo<span style="color:#e6db74">&#34;hello&#34;</span> &gt;&gt; ~/count <span style="color:#75715e">#每分钟输出hello到count文件下</span>
+</span></span></code></pre></div><h1 id="用户信息保存">用户信息保存</h1>
+<p>系统中的用户配置信息保存在<code>/etc/passwd</code>文件下<br>
+每一行都是一个用户，信息由 <code>:</code> 隔开</p>
+<pre tabindex="0"><code class="language-conf" data-lang="conf">root:x:0:0:root:/root:/bin/bash
+
+# 用户名
+# 可选的加密后的密码
+# 数字用户ID
+# 数字组ID
+# 用户名和注释字段
+# 用户主目录
+# 可选的用户命令解释器
+</code></pre><p>用户的密码的哈希信息保存在<code>/etc/shadow</code>里</p>
+<pre tabindex="0"><code class="language-conf" data-lang="conf">ustc:$6$UN2k0DcnU7QtJ2jW$NKcO3Tbem.3wte5tp5o.P6TDFxx5jaYu0lHFy9qNp4XehBGP/69HwtOYaE/s7PQPKKVCJZCnVJQh2A6.rN4oJ.:18948:0:99999:7:::
+</code></pre><h1 id="用户分类">用户分类</h1>
+<ol>
+<li>root用户</li>
+<li>系统用户</li>
+<li>普通用户 home目录位于/home/下</li>
+</ol>
+<p><code>su username</code>可以换用户，如果没有参数切换成root用户<br>
+<code>sudo -u username command</code>以另一个用户的身份执行命令</p>
+<p>Ubuntu等linux发行版默认禁止了root用户的登入<br>
+可以使用<code>sudo su</code>得到一个root用户权限的shell</p>
+<h1 id="用户组">用户组</h1>
+<p>用户组可以为一批用户一次性设置权限<br>
+使用<code>groups</code>命令查看自己所在的用户组<br>
+用户组有自己的编号:GID (Group ID)</p>
+<h1 id="命令行的用户操作">命令行的用户操作</h1>
+<p>修改密码<code>passwd username</code>如果没有参数则修改自己的密码</p>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#源">源</a></li>
+    <li><a href="#查看文件内容">查看文件内容</a></li>
+    <li><a href="#进程标识符pid">进程标识符(PID)</a></li>
+    <li><a href="#nice和pri">nice和PRI</a></li>
+    <li><a href="#进程状态">进程状态</a></li>
+    <li><a href="#前后台切换">前后台切换</a></li>
+    <li><a href="#进程信号">进程信号</a></li>
+    <li><a href="#服务管理">服务管理</a></li>
+    <li><a href="#自定义服务">自定义服务</a></li>
+    <li><a href="#列行性任务">列行性任务</a></li>
+    <li><a href="#用户信息保存">用户信息保存</a></li>
+    <li><a href="#用户分类">用户分类</a></li>
+    <li><a href="#用户组">用户组</a></li>
+    <li><a href="#命令行的用户操作">命令行的用户操作</a></li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+    <script> (document.getElementsByClassName('nav-title')[0]).getElementsByClassName('nav-brand')[0].innerText = title; </script>
+    
+
+    <span>&copy; 2023 Text in footer</span>
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
