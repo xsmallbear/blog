@@ -1,7 +1,7 @@
 name: Auto hugo
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  hugo-build:
     runs-on: ubuntu-latest
     steps:      
       - name: Check out repository 🚀
@@ -13,6 +13,14 @@ jobs:
           extended: true
       - name: Set gokarna Theme 🍞
         run: git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
-      - name: hugo Build
+      - name: hugo Build 🤩
         run: hugo
+      - name: Push github page
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: page
+          commit_message: ${{ github.event.head_commit.message }}
+
        
