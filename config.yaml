@@ -39,8 +39,8 @@ params:
     avatarSize: "size-l"
     # 标题和头像下的说明
     description: "Hello, world!"
-    # a标签下的强调色
-    accentColor: "#08F"
+    # 强调色
+    # accentColor: "#E32636"
 
     customHeadHTML: "<script>
       const title = '小熊的博客';
@@ -94,7 +94,7 @@ params:
     </script>"
 
     # 在页脚部分显示的文本
-    footer: "Text in footer"
+    footer: "SmallBear"
     socialIcons:
       - name: "twitter"
         url: "https://twitter.com/SmallbearQwQ"
