@@ -13,4 +13,6 @@ jobs:
           extended: true
       - name: Set gokarna Theme 🍞
         run: git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
+      - name: hugo Build
+        run: hugo
        

@@ -1,0 +1,8 @@
+data/
+layouts/
+public/
+themes/
+resources/
+
+archetypes
+.hugo_build.lock
