@@ -3,7 +3,7 @@ baseURL: "https://bearcurb.blog/"
 languageCode: "zh-cn"
 defaultContentLanguage: "zh-cn"
 
-title: ""
+title: "小熊的博客"
 
 theme: "gokarna"
 
@@ -38,7 +38,7 @@ params:
     # 头像尺寸size-xs、size-s、size-m、size-l、size-xl
     avatarSize: "size-l"
     # 标题和头像下的说明
-    description: "Hello, world!"
+    description: "你好喵!"
     # 强调色
     # accentColor: "#E32636"
 
