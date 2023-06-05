@@ -42,7 +42,7 @@ params:
     # 强调色
     # accentColor: "#E32636"
 
-    customHeadHTML: "<script>
+    customHeadHTML: """<script>
       const title = '小熊的博客';
       const emoticon = [
         '(´･ω･`)',
@@ -87,12 +87,12 @@ params:
         if(visible)
           document.title = currentTile;
       }, 1000);
-      </script>"
+      </script>"""
 
-    customFooterHTML: "<script>
+    customFooterHTML: """<script>
       (document.getElementsByClassName('nav-title')[0]).getElementsByClassName('nav-brand')[0].innerText = title;
       (document.getElementsByClassName('home-about')[0]).getElementsByTagName('h1')[0].innerText = '';
-    </script>"
+    </script>"""
 
     # 在页脚部分显示的文本
     footer: "SmallBear"
