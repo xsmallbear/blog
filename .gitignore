@@ -2,6 +2,7 @@ data/
 layouts/
 public/
 resources/
+gokarna/
 
 archetypes
 .hugo_build.lock
