@@ -1,0 +1,16 @@
+name: Auto hugo
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:      
+      - name: Check out repository 🚀
+        uses: actions/checkout@v3
+      - name: Setup hugo 🥖
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+      - name: Set gokarna Theme 🍞
+        run: git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
+       
