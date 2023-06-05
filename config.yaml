@@ -91,7 +91,7 @@ params:
 
     customFooterHTML: "<script>
       (document.getElementsByClassName('nav-title')[0]).getElementsByClassName('nav-brand')[0].innerText = title;
-      (document.getElementsByClassName('home-about')[0]).getElementsByTagName('a')[0].innerText = '';
+      (document.getElementsByClassName('home-about')[0]).getElementsByTagName('h1')[0].innerText = '';
     </script>"
 
     # 在页脚部分显示的文本
