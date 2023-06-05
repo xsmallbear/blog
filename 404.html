@@ -48,9 +48,10 @@
 
     
     
-    <script> const title = '小熊的博客'; const emojis = ['🐻', '🐻‍❄️', '🐼', '🦝', '🧸']; let visible = false; let emojisIndex = 0; let currentTile = title + emojis[emojisIndex];
-document.title = currentTile; document.addEventListener('visibilitychange', ()=>{ document.visibilityState === 'visible' ? document.title = currentTile : document.title = '快看我 快看我' }); document.addEventListener('visibilitychange', ()=>{ document.visibilityState === 'visible' ? visible = true : visible = false });
-setInterval(()=>{ if(emojisIndex >= emojis.length - 1){ emojisIndex = 0; } emojisIndex++; currentTile = title + emojis[emojisIndex]; if(visible) document.title = currentTile; }, 1000); </script>
+    <script> const title = '小熊的博客'; const emoticon = [ '(´･ω･`)', 'm9(^Д^)', 'm(_ _)m', '(`･ω･´)', '＿|￣|○', '(｀-´)>', '(´；ω；`)', 'ヽ(´ー｀)ﾉ', 'ヽ(`Д´)ﾉ', '(＃ﾟДﾟ)', '（ ´Д｀）♥', '（´∀｀）', 'Σ(゜д゜;)', '( ﾟдﾟ)', '（・∀・）', '（・Ａ・）', 'ヽ(´▽`)/', '^ㅂ^' ]; let visible = true; let emojisIndex = 0; let currentTile = title + emoticon[emojisIndex];
+document.title = currentTile; document.addEventListener('visibilitychange', ()=>{ document.visibilityState === 'visible' ? document.title = currentTile : document.title = '快看我! 快看我!';
+document.visibilityState === 'visible' ? visible = true : visible = false; });
+setInterval(()=>{ emojisIndex = Math.floor(Math.random() * (emoticon.length)); currentTile = title + emoticon[emojisIndex]; if(visible) document.title = currentTile; }, 1000); </script>
     
 </head>
 <body>
