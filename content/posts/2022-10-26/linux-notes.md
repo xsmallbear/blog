@@ -1,6 +1,6 @@
 ---
 title: "Linux 避坑笔记"
-date: 2022-10-25
+date: 2022-10-26
 type: "post"
 tags: ["database"]
 showTableOfContents: true

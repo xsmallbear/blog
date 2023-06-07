@@ -22,7 +22,7 @@ menu:
       url: "/posts/"
       weight: 2
 
-    - identifier: "t"
+    - identifier: "tags"
       name: "标签"
       url: "/tags/"
       weight: 3
@@ -41,6 +41,8 @@ params:
     description: "你好喵!"
     # 强调色
     # accentColor: "#E32636"
+    # recent|popular
+    # showPostsOnHomePage: "recent"
 
     customHeadHTML: "<script>
       const title = '小熊的博客';
@@ -92,6 +94,7 @@ params:
     customFooterHTML: "<script>
       (document.getElementsByClassName('nav-title')[0]).getElementsByClassName('nav-brand')[0].innerText = title;
       (document.getElementsByClassName('home-about')[0]).getElementsByTagName('h1')[0].innerText = '';
+      (document.getElementsByTagName('hr')[0]).parentNode.removeChild(document.getElementsByTagName('hr')[0]);
     </script>"
 
     # 在页脚部分显示的文本
