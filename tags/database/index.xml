@@ -6,13 +6,13 @@
     <description>Recent content in database on 小熊的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 25 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bearcurb.blog/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bearcurb.blog/tags/database/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux 避坑笔记</title>
-      <link>https://bearcurb.blog/posts/2022-10-25-linux/</link>
-      <pubDate>Tue, 25 Oct 2022 00:00:00 +0000</pubDate>
+      <link>https://bearcurb.blog/posts/2022-10-26/linux-notes/</link>
+      <pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://bearcurb.blog/posts/2022-10-25-linux/</guid>
+      <guid>https://bearcurb.blog/posts/2022-10-26/linux-notes/</guid>
       <description>源 apt官方软件源位于/etc/apt/sources.list下
 cat /etc/apt/sources.list | grep -v &amp;quot;#&amp;quot; 查看过滤过注释的源列表
 USTC Mirror 网站

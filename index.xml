@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 28 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://bearcurb.blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>sql 笔记</title>
-      <link>https://bearcurb.blog/posts/2022-10-28-sql-notes/</link>
+      <link>https://bearcurb.blog/posts/2022-10-28/sql-notes/</link>
       <pubDate>Fri, 28 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://bearcurb.blog/posts/2022-10-28-sql-notes/</guid>
+      <guid>https://bearcurb.blog/posts/2022-10-28/sql-notes/</guid>
       <description>数据库基础 SQL语句分类 DDL(Data Definition Language):DDL允许用户定义数据，也就是创建表、删除表、修改表结构这些操作。通常，DDL由数据库管理员执行。 DML(Data Manipulation Language):DML为用户提供添加、删除、更新数据的能力，这些是应用程序对数据库的日常操作。 DQL(Data Query Language):DQL允许用户查询数据，这也是通常最频繁的数据库日常操作。 数据查询 基本查询 SELECT * FROM &amp;lt;表名&amp;gt; 条件查询 SELECT * FROM &amp;lt;表名&amp;gt; WHERE &amp;lt;条件表达式&amp;gt; 投影查询 投影查询就是只需要显示部分的列
 SELECT 列1, 列2, 列3 ... 排序 SELECT * FROM &amp;lt;表名&amp;gt; ORDER BY &amp;lt;需要排序的值&amp;gt; 如果要反向排序需要 DESC
 分页查询 SELECT * FROM &amp;lt;表名&amp;gt; LIMIT &amp;lt;每页显示多少&amp;gt; OFFSET &amp;lt;从哪一页开始&amp;gt; 聚合查询 函数 说明 SUM 计算某一列的合计值，该列必须为数值类型 AVG 计算某一列的平均值，该列必须为数值类型 MAX 计算某一列的最大值 MIN 计算某一列的最小值 分组聚合使用 GROUP BY子句
@@ -22,10 +22,10 @@ SELECT * FROM 表1, 表2 连接查询 SELECT * FROM &amp;lt;表名&amp;gt; INNER
     
     <item>
       <title>Linux 避坑笔记</title>
-      <link>https://bearcurb.blog/posts/2022-10-25-linux/</link>
-      <pubDate>Tue, 25 Oct 2022 00:00:00 +0000</pubDate>
+      <link>https://bearcurb.blog/posts/2022-10-26/linux-notes/</link>
+      <pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://bearcurb.blog/posts/2022-10-25-linux/</guid>
+      <guid>https://bearcurb.blog/posts/2022-10-26/linux-notes/</guid>
       <description>源 apt官方软件源位于/etc/apt/sources.list下
 cat /etc/apt/sources.list | grep -v &amp;quot;#&amp;quot; 查看过滤过注释的源列表
 USTC Mirror 网站
