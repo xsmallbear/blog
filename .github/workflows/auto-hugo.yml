@@ -14,7 +14,7 @@ jobs:
           hugo-version: 'latest'
           extended: true
       - name: Set gokarna Theme 🍞
-        run: git submodule add https://github.com/526avijitgupta/gokarna.git themes/gokarna
+        run: git submodule add https://github.com/xsmallbear/gokarna.git themes/gokarna
       - name: hugo Build 🤩
         run: hugo
       - name: Push github page
