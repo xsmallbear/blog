@@ -163,7 +163,8 @@ setInterval(()=>{ emojisIndex = Math.floor(Math.random() * (emoticon.length)); c
         </main><footer class="footer">
     
     
-    <script> (document.getElementsByClassName('nav-title')[0]).getElementsByClassName('nav-brand')[0].innerText = title; (document.getElementsByClassName('home-about')[0]).getElementsByTagName('h1')[0].innerText = ''; (document.getElementsByTagName('hr')[0]).parentNode.removeChild(document.getElementsByTagName('hr')[0]); </script>
+    <script> (document.getElementsByClassName('nav-title')[0]).getElementsByClassName('nav-brand')[0].innerText = title;
+let homeAbout = (document.getElementsByClassName('home-about')[0]); if(homeAbout) homeAbout.getElementsByTagName('h1')[0].innerText = ''; let hr = (document.getElementsByTagName('hr')[0]); if(hr) hr.parentNode.removeChild(document.getElementsByTagName('hr')[0]); </script>
     
 
     <span>&copy; 2023 SmallBear</span>
