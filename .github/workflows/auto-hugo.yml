@@ -23,7 +23,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: page
-          cname: bearcurb.blog
           commit_message: ${{ github.event.head_commit.message }}
 
        
