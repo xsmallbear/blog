@@ -3,18 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://bearcurb.blog/</loc>
-    <lastmod>2022-10-28T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bearcurb.blog/tags/javascript/</loc>
+    <lastmod>2023-07-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bearcurb.blog/posts/2023-7-30/javascript-notes/</loc>
+    <lastmod>2023-07-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bearcurb.blog/posts/</loc>
+    <lastmod>2023-07-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bearcurb.blog/tags/</loc>
+    <lastmod>2023-07-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bearcurb.blog/tags/linux/</loc>
     <lastmod>2022-10-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://bearcurb.blog/posts/</loc>
-    <lastmod>2022-10-28T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://bearcurb.blog/posts/2022-10-28/sql-notes/</loc>
-    <lastmod>2022-10-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bearcurb.blog/tags/</loc>
     <lastmod>2022-10-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bearcurb.blog/tags/database/</loc>
@@ -22,12 +28,6 @@
   </url><url>
     <loc>https://bearcurb.blog/posts/2022-10-26/linux-notes/</loc>
     <lastmod>2022-10-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bearcurb.blog/tags/javascript/</loc>
-    <lastmod>2022-07-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bearcurb.blog/posts/2023-7-30/javascript-notes/</loc>
-    <lastmod>2022-07-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bearcurb.blog/categories/</loc>
   </url>
