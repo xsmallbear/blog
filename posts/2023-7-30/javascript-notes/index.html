@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>JavaScript 笔记</title>
+    <meta name="description" content="你好喵!">
+    <meta name="keywords" content='JavaScript'>
+
+    <meta property="og:url" content="https://bearcurb.blog/posts/2023-7-30/javascript-notes/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="JavaScript 笔记">
+    <meta property="og:description" content="你好喵!">
+    <meta property="og:image" content="https://bearcurb.blog/images/avatar.png">
+    <meta property="og:image:secure_url" content="https://bearcurb.blog/images/avatar.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JavaScript 笔记">
+    <meta name="twitter:description" content="你好喵!">
+    <meta property="twitter:domain" content="https://bearcurb.blog/posts/2023-7-30/javascript-notes/">
+    <meta property="twitter:url" content="https://bearcurb.blog/posts/2023-7-30/javascript-notes/">
+    <meta name="twitter:image" content="https://bearcurb.blog/images/avatar.png">
+
+    
+    <link rel="canonical" href="https://bearcurb.blog/posts/2023-7-30/javascript-notes/" />
+
+    <link rel="stylesheet" type="text/css" href="https://bearcurb.blog//css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="https://bearcurb.blog//css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="https://bearcurb.blog//css/dark.css">
+
+    <script src="https://bearcurb.blog//js/svg-injector.min.js"></script>
+    <script src="https://bearcurb.blog//js/feather-icons.min.js"></script>
+    <script src="https://bearcurb.blog//js/main.js"></script>
+
+    
+    
+    <script> const title = '小熊的博客'; const emoticon = [ '(´･ω･`)', 'm9(^Д^)', 'm(_ _)m', '(`･ω･´)', '＿|￣|○', '(｀-´)>', '(´；ω；`)', 'ヽ(´ー｀)ﾉ', 'ヽ(`Д´)ﾉ', '(＃ﾟДﾟ)', '（ ´Д｀）♥', '（´∀｀）', 'Σ(゜д゜;)', '( ﾟдﾟ)', '（・∀・）', '（・Ａ・）', 'ヽ(´▽`)/', '^ㅂ^' ]; let visible = true; let emojisIndex = 0; let currentTile = title + emoticon[emojisIndex];
+document.title = currentTile; document.addEventListener('visibilitychange', ()=>{ document.visibilityState === 'visible' ? document.title = currentTile : document.title = '快看我! 快看我!';
+document.visibilityState === 'visible' ? visible = true : visible = false; });
+setInterval(()=>{ emojisIndex = Math.floor(Math.random() * (emoticon.length)); currentTile = title + emoticon[emojisIndex]; if(visible) document.title = currentTile; }, 1000); </script>
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://bearcurb.blog/">
+                <img src="https://bearcurb.blog//images/avatar.png" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://bearcurb.blog/">小熊的博客</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://bearcurb.blog/"> 主页 </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://bearcurb.blog/posts/"> 归档 </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://bearcurb.blog/tags/"> 标签 </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://bearcurb.blog/index.xml"><span data-feather='rss'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://bearcurb.blog/"> 主页 </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://bearcurb.blog/posts/"> 归档 </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://bearcurb.blog/tags/"> 标签 </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://bearcurb.blog/index.xml"><span data-feather='rss'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>JavaScript 笔记</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            January 1, 0001
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://bearcurb.blog/tags/javascript">JavaScript</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h1 id="写在前面">写在前面</h1>
+<p>本笔记是(<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript">MDN Web Docs的JavaScript教程</a>)笔记</p>
+<h1 id="语法和数据类型">语法和数据类型</h1>
+<p>JavaScript 是区分大小写的,并使用 Unicode 字符集</p>
+<p><code>früh</code> 和 <code>Früh</code> 则是两个不同的变量</p>
+<p>在 JavaScript 中,指令被称为语句(Statement),并用分号(;)进行分隔(不写也可以)。</p>
+<h2 id="变量和作用域">变量和作用域</h2>
+<ul>
+<li><code>var</code> 声明一个变量。</li>
+<li><code>let</code> 声明一个块作用域的局部变量。</li>
+<li><code>const</code> 声明一个块作用域的只读常量。</li>
+</ul>
+<p>用 <code>var</code> 或 <code>let</code> 语句声明的变量,如果没有赋初始值,则其值为 <code>undefined</code>。</p>
+<h3 id="作用域">作用域</h3>
+<ul>
+<li>全局变量 可被当前文件中任何地方的代码访问</li>
+<li>局部变量 只能在当前函数内访问</li>
+</ul>
+<h3 id="变量提升">变量提升</h3>
+<p>先使用变量稍后声明变量被成为变量提升,但是提升后的变量会返回undefined</p>
+<ul>
+<li><code>var</code>声明的变量可以被正常用</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">undefined</span>); <span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+</span></span></code></pre></div><ul>
+<li><code>let</code>和<code>const</code>声明的变量会抛(ReferenceError)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>); <span style="color:#75715e">// ReferenceError
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>; 
+</span></span></code></pre></div><h3 id="函数提升">函数提升</h3>
+<p>函数声明会被提升,函数表达式不会被提升</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#a6e22e">foo</span>(); <span style="color:#75715e">// &#34;bar&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">foo</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;bar&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">baz</span>(); <span style="color:#75715e">// 类型错误：baz 不是一个函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">baz</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;bar2&#34;</span>);
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h2 id="基本数据类型">基本数据类型</h2>
+<ul>
+<li><code>Number</code> 整数或者浮点数</li>
+<li><code>String</code> 字符串</li>
+<li><code>BigInt</code> 大整数</li>
+<li><code>Boolean</code> 布尔值</li>
+<li><code>null</code> 表明null的特殊关键字</li>
+<li><code>undefined</code> 特殊关键字,undefined表示变量未赋值时的属性</li>
+<li><code>Symbol</code> 符号</li>
+<li><code>Object</code> 对象</li>
+</ul>
+<h2 id="字面量">字面量</h2>
+<ul>
+<li>数组字面量 (Array literals) <code>[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</code></li>
+<li>布尔字面量 (Boolean literals) <code>true</code>和<code>false</code>。</li>
+<li>数字字面量 (Numeric_literals) <code> 3.14; -.2345789; -3.12e+12; -3.12*10^12</code></li>
+<li>对象字面量 (Object literals) <code>{name:&quot;smallbear&quot;,sex:&quot;man&quot;}</code></li>
+<li>RegExp 字面值 <code>/ab+c/</code></li>
+<li>字符串字面量 (String literals) <code>hello World!</code></li>
+</ul>
+<h1 id="流程控制与错误处理">流程控制与错误处理</h1>
+<h2 id="语句块">语句块</h2>
+<p>由一对大括号界定的代码范围</p>
+<p><code>{const a = 10} //这就是个语句块</code></p>
+<h2 id="条件判断语句">条件判断语句</h2>
+<h3 id="if语句">if语句</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">条件</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">语句1</span>
+</span></span><span style="display:flex;"><span>}<span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">语句2</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">条件</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">语句1</span>
+</span></span><span style="display:flex;"><span>}<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">条件</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">语句2</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="switch语句">switch语句</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#66d9ef">switch</span>(<span style="color:#a6e22e">变量</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">值1</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">值2</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">没有匹配时执行的代码</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="异常处理语句">异常处理语句</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#66d9ef">try</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">代码</span>
+</span></span><span style="display:flex;"><span>}<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">e</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">有异常执行的代码</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">finally</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">无论有无异常都会执行的代码</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>
+<p>throw语句 抛出一个异常,会被try语句捕获,可以抛出任何的表达式或者对象</p>
+</li>
+<li>
+<p>try块 捕获异常,如果其中的代码运行出现异常,跳转到catch快</p>
+</li>
+<li>
+<p>catch块 处理异常,被捕获的异常会在catch中进行处理,JavaScript只有一个catch快</p>
+</li>
+<li>
+<p>finally块 无论try块中是否存在异常,都会执行的部分</p>
+</li>
+</ul>
+<h1 id="循环与迭代">循环与迭代</h1>
+<h2 id="for">for</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="dowhile">do&hellip;while</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>}<span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>)
+</span></span></code></pre></div><h2 id="while">while</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="label">label</h2>
+<p>label提供了一个可以让其他语句跳转到此位置的标识符，可以被<code>break</code>和<code>continue</code>跳转到此</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#a6e22e">flag1</span><span style="color:#f92672">:</span>  <span style="color:#75715e">//flag1就是一个label
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;hello&#34;</span>)
+</span></span></code></pre></div><h2 id="break">break</h2>
+<ul>
+<li>中止循环 中止<code>while</code>，<code>do-while</code>，<code>for</code>(在多层循环中只能跳出一层)</li>
+<li>跳出switch 被<code>case</code>匹配后跳出switch，避免执行之后的<code>case</code></li>
+<li>跳转到指定的label 在很复杂的多层循环中可以用</li>
+</ul>
+<h2 id="continue">continue</h2>
+<ul>
+<li>中止本次循环，立刻开始下一次循环</li>
+<li>跳到一个被 label 标识的循环语句</li>
+</ul>
+<h2 id="forin">for&hellip;in</h2>
+<ul>
+<li>遍历对象所有可枚举的属性</li>
+<li>将属性名（key）传入循环体中</li>
+<li>遍历顺序确定</li>
+</ul>
+<h2 id="forof">for&hellip;of</h2>
+<ul>
+<li>遍历可迭代对象(Array、Map、Set、arguments 等)</li>
+<li>将属性名（value）传入循环体中</li>
+<li>遍历顺序确定(Iterator protocol)</li>
+</ul>
+<h1 id="函数">函数</h1>
+<h2 id="定义函数">定义函数</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#75715e">//定义了一个名为square的函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">square</span>(<span style="color:#a6e22e">number</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">number</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">number</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//使用表达式的方式定义了一个名为square2的函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">square2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">number</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">number</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">number</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="作用域和函数堆栈">作用域和函数堆栈</h2>
+<h3 id="作用域-1">作用域</h3>
+<p>定义的函数默认具有全局的作用域,嵌套定义的函数的作用域则是包裹它的函数</p>
+<h3 id="递归">递归</h3>
+<p>函数有三种方法可以调用自己</p>
+<ul>
+<li>函数名</li>
+<li>arguments.callee</li>
+<li>作用域下指向函数的变量名</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">bar</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">foo</span>()               <span style="color:#75715e">//递归调用自己
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">arguments</span>.<span style="color:#a6e22e">callee</span>()  <span style="color:#75715e">//递归调用自己
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">bar</span>()               <span style="color:#75715e">//递归调用自己
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h3 id="嵌套函数">嵌套函数</h3>
+<p>在一个函数内定义另一个函数成为嵌套函数。嵌套函数可以访问其容器函数的参数和变量</p>
+<ul>
+<li>内部函数只在其外部函数中可以访问</li>
+<li>内部函数形成了一个闭包：它可以访问外部函数的参数和变量，但是外部函数却不能使用它的参数和变量</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fun1</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">number1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">number2</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//在这里无法访问 c,d,number3,number4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fun2</span>(<span style="color:#a6e22e">c</span>, <span style="color:#a6e22e">d</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">number3</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">number4</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//在这里可以访问 a,b,number1,number2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="命名冲突">命名冲突</h3>
+<p>当发生两个参数或者变量同名时，更近的作用域享有更高的优先权；链的第一个是最里面的作用域，最后一个元素是最外层的作用域</p>
+<h2 id="闭包">闭包</h2>
+<p>闭包是JavaScript中最强大特性之一</p>
+<p>闭包指的是在一个嵌套函数中，以某种方法让内部函数访问外部函数的作用域</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">pet</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getName</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">name</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">getName</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//调用pet时返回内部函数getName
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myPet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">pet</span>(<span style="color:#e6db74">&#34;Hello&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//这里调用了内部函数getName，闭包产生
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myPet</span>()) <span style="color:#75715e">//运行结果 Hello
+</span></span></span></code></pre></div><h2 id="arguments-对象">arguments 对象</h2>
+<p>函数的实际参数会存在一个类似数组的arguments对象中</p>
+<p><code>arguments[i]</code>访问函数的参数</p>
+<p><code>arguments.length</code>表示参数的数量</p>
+<blockquote>
+<p>arguments 变量只是“类数组对象”，并不是一个数组</p>
+</blockquote>
+<h2 id="函数参数">函数参数</h2>
+<h3 id="默认参数">默认参数</h3>
+<p>函数的默认参数是undefined，也可以自己指定某个参数的默认值</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#75715e">//这里指定b的默认参数为1 函数调用时如果只有一个参数，则b会赋予默认值1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fuc</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">b</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="剩余参数">剩余参数</h3>
+<p>剩余参数将不确定数量的参数表示为数组</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">a</span>, ...<span style="color:#a6e22e">b</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#a6e22e">a</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#a6e22e">b</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">test</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//运行结果
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// a 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// b [ 2, 3, 4, 5 ]
+</span></span></span></code></pre></div><h2 id="箭头函数">箭头函数</h2>
+<p>引入箭头函数的两个因素</p>
+<ul>
+<li>使lambda更精简</li>
+<li>this</li>
+</ul>
+<p>function定义的函数会重新定义自己的this值，其条件如下</p>
+<ul>
+<li>非严格模式
+<ul>
+<li>直接调用(function invocation):指向全局对象</li>
+<li>作为某个对象的方法调用(method invocation):指向该对象</li>
+<li>使用call或apply方法调用:显式地设置为传递给这些方法的第一个参数</li>
+</ul>
+</li>
+<li>严格模式
+<ul>
+<li>直接调用(function invocation):设置为undefined</li>
+</ul>
+</li>
+</ul>
+<p>箭头函数捕获上下文中的this值作为自己的this值</p>
+<h1 id="数组集合和映射">数组集合和映射</h1>
+<h2 id="array">Array</h2>
+<h3 id="创建array">创建Array</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#75715e">//创建一个有三个值的数组
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">a1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Array(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">a2</span> <span style="color:#f92672">=</span> Array(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">a3</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//创建一个长度为3，但是没有任何元素的数组
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">b1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Array(<span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">b2</span> <span style="color:#f92672">=</span> Array(<span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">b3</span> <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">b3</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//创建一个二维数组
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Array(<span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Array(<span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">j</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">i</span>][<span style="color:#a6e22e">j</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;[&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;,&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">+</span><span style="color:#e6db74">&#34;]&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//稀疏数组
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">a4</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, , , <span style="color:#ae81ff">5</span>];
+</span></span></code></pre></div><h3 id="访问数组">访问数组</h3>
+<p>数组使用<code>属性访问器</code>来访问</p>
+<ul>
+<li>array[value]</li>
+</ul>
+<p>如果其中的值是一个非整型，那么会作为一个对象的属性创建</p>
+<h2 id="set">Set</h2>
+<h3 id="创建set">创建Set</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Set</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;one&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;tow&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;three&#34;</span>)
+</span></span></code></pre></div><h3 id="修改set">修改Set</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">has</span>(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">s</span>.<span style="color:#66d9ef">delete</span>(<span style="color:#e6db74">&#34;foo&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">size</span>
+</span></span></code></pre></div><h2 id="map">Map</h2>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#写在前面">写在前面</a></li>
+    <li><a href="#语法和数据类型">语法和数据类型</a>
+      <ul>
+        <li><a href="#变量和作用域">变量和作用域</a>
+          <ul>
+            <li><a href="#作用域">作用域</a></li>
+            <li><a href="#变量提升">变量提升</a></li>
+            <li><a href="#函数提升">函数提升</a></li>
+          </ul>
+        </li>
+        <li><a href="#基本数据类型">基本数据类型</a></li>
+        <li><a href="#字面量">字面量</a></li>
+      </ul>
+    </li>
+    <li><a href="#流程控制与错误处理">流程控制与错误处理</a>
+      <ul>
+        <li><a href="#语句块">语句块</a></li>
+        <li><a href="#条件判断语句">条件判断语句</a>
+          <ul>
+            <li><a href="#if语句">if语句</a></li>
+            <li><a href="#switch语句">switch语句</a></li>
+            <li><a href="#异常处理语句">异常处理语句</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#循环与迭代">循环与迭代</a>
+      <ul>
+        <li><a href="#for">for</a></li>
+        <li><a href="#dowhile">do&hellip;while</a></li>
+        <li><a href="#while">while</a></li>
+        <li><a href="#label">label</a></li>
+        <li><a href="#break">break</a></li>
+        <li><a href="#continue">continue</a></li>
+        <li><a href="#forin">for&hellip;in</a></li>
+        <li><a href="#forof">for&hellip;of</a></li>
+      </ul>
+    </li>
+    <li><a href="#函数">函数</a>
+      <ul>
+        <li><a href="#定义函数">定义函数</a></li>
+        <li><a href="#作用域和函数堆栈">作用域和函数堆栈</a>
+          <ul>
+            <li><a href="#作用域-1">作用域</a></li>
+            <li><a href="#递归">递归</a></li>
+            <li><a href="#嵌套函数">嵌套函数</a></li>
+            <li><a href="#命名冲突">命名冲突</a></li>
+          </ul>
+        </li>
+        <li><a href="#闭包">闭包</a></li>
+        <li><a href="#arguments-对象">arguments 对象</a></li>
+        <li><a href="#函数参数">函数参数</a>
+          <ul>
+            <li><a href="#默认参数">默认参数</a></li>
+            <li><a href="#剩余参数">剩余参数</a></li>
+          </ul>
+        </li>
+        <li><a href="#箭头函数">箭头函数</a></li>
+      </ul>
+    </li>
+    <li><a href="#数组集合和映射">数组集合和映射</a>
+      <ul>
+        <li><a href="#array">Array</a>
+          <ul>
+            <li><a href="#创建array">创建Array</a></li>
+            <li><a href="#访问数组">访问数组</a></li>
+          </ul>
+        </li>
+        <li><a href="#set">Set</a>
+          <ul>
+            <li><a href="#创建set">创建Set</a></li>
+            <li><a href="#修改set">修改Set</a></li>
+          </ul>
+        </li>
+        <li><a href="#map">Map</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+    <script> (document.getElementsByClassName('nav-title')[0]).getElementsByClassName('nav-brand')[0].innerText = title;
+let homeAbout = (document.getElementsByClassName('home-about')[0]); if(homeAbout) homeAbout.getElementsByTagName('h1')[0].innerText = ''; let hr = (document.getElementsByTagName('hr')[0]); if(hr) hr.parentNode.removeChild(document.getElementsByTagName('hr')[0]); </script>
+    
+
+    <span>&copy; 2023 SmallBear</span>
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

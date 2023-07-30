@@ -244,20 +244,20 @@ setInterval(()=>{ emojisIndex = Math.floor(Math.random() * (emoticon.length)); c
 <code>systemctl list-units</code> 查看所有的服务内容</p>
 <h1 id="自定义服务">自定义服务</h1>
 <p>服务的配置文件们位于<code>/etc/systemd/system</code>下</p>
-<pre tabindex="0"><code class="language-conf" data-lang="conf">[Unit]
-Description=Jupyter Notebook    # 该服务的简要描述
-
-[Service]
-PIDFile=/run/jupyter.pid        # 用来存放 PID 的文件
-ExecStart=/usr/local/bin/jupyter-notebook --allow-root
-                                # 使用绝对路径标明的命令及命令行参数
-WorkingDirectory=/root          # 服务启动时的工作目录
-Restart=always                  # 重启模式，这里是无论因何退出都重启
-RestartSec=10                   # 退出后多少秒重启
-
-[Install]
-WantedBy=multi-user.target      # 依赖目标，这里指进入多用户模式后再启动该服务
-</code></pre><p>配置文件名称就是服务的名字<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-conf" data-lang="conf"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">[</span>Unit<span style="color:#960050;background-color:#1e0010">]</span>
+</span></span><span style="display:flex;"><span>Description<span style="color:#f92672">=</span>Jupyter Notebook    <span style="color:#75715e"># 该服务的简要描述
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">[</span>Service<span style="color:#960050;background-color:#1e0010">]</span>
+</span></span><span style="display:flex;"><span>PIDFile<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">/</span>run<span style="color:#960050;background-color:#1e0010">/</span>jupyter.pid        <span style="color:#75715e"># 用来存放 PID 的文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>ExecStart<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">/</span>usr<span style="color:#960050;background-color:#1e0010">/</span>local<span style="color:#960050;background-color:#1e0010">/</span>bin<span style="color:#960050;background-color:#1e0010">/</span>jupyter-notebook --allow-root
+</span></span><span style="display:flex;"><span>                                <span style="color:#75715e"># 使用绝对路径标明的命令及命令行参数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>WorkingDirectory<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">/</span>root          <span style="color:#75715e"># 服务启动时的工作目录
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Restart<span style="color:#f92672">=</span>always                  <span style="color:#75715e"># 重启模式，这里是无论因何退出都重启
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>RestartSec<span style="color:#f92672">=</span>10                   <span style="color:#75715e"># 退出后多少秒重启
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">[</span>Install<span style="color:#960050;background-color:#1e0010">]</span>
+</span></span><span style="display:flex;"><span>WantedBy<span style="color:#f92672">=</span>multi-user.target      <span style="color:#75715e"># 依赖目标，这里指进入多用户模式后再启动该服务
+</span></span></span></code></pre></div><p>配置文件名称就是服务的名字<br>
 <code>systemctl start jupyter</code> 启动<br>
 <code>systemctl stop jupyter</code> 停止<br>
 <code>systemctl enable jupyter</code> 设置开机启动<br>
@@ -274,18 +274,18 @@ WantedBy=multi-user.target      # 依赖目标，这里指进入多用户模式�
 </span></span></code></pre></div><h1 id="用户信息保存">用户信息保存</h1>
 <p>系统中的用户配置信息保存在<code>/etc/passwd</code>文件下<br>
 每一行都是一个用户，信息由 <code>:</code> 隔开</p>
-<pre tabindex="0"><code class="language-conf" data-lang="conf">root:x:0:0:root:/root:/bin/bash
-
-# 用户名
-# 可选的加密后的密码
-# 数字用户ID
-# 数字组ID
-# 用户名和注释字段
-# 用户主目录
-# 可选的用户命令解释器
-</code></pre><p>用户的密码的哈希信息保存在<code>/etc/shadow</code>里</p>
-<pre tabindex="0"><code class="language-conf" data-lang="conf">ustc:$6$UN2k0DcnU7QtJ2jW$NKcO3Tbem.3wte5tp5o.P6TDFxx5jaYu0lHFy9qNp4XehBGP/69HwtOYaE/s7PQPKKVCJZCnVJQh2A6.rN4oJ.:18948:0:99999:7:::
-</code></pre><h1 id="用户分类">用户分类</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-conf" data-lang="conf"><span style="display:flex;"><span>root<span style="color:#960050;background-color:#1e0010">:</span>x<span style="color:#960050;background-color:#1e0010">:</span>0<span style="color:#960050;background-color:#1e0010">:</span>0<span style="color:#960050;background-color:#1e0010">:</span>root<span style="color:#960050;background-color:#1e0010">:/</span>root<span style="color:#960050;background-color:#1e0010">:/</span>bin<span style="color:#960050;background-color:#1e0010">/</span>bash
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 用户名
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># 可选的加密后的密码
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># 数字用户ID
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># 数字组ID
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># 用户名和注释字段
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># 用户主目录
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># 可选的用户命令解释器
+</span></span></span></code></pre></div><p>用户的密码的哈希信息保存在<code>/etc/shadow</code>里</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-conf" data-lang="conf"><span style="display:flex;"><span>ustc<span style="color:#960050;background-color:#1e0010">:$</span>6<span style="color:#960050;background-color:#1e0010">$</span>UN2k0DcnU7QtJ2jW<span style="color:#960050;background-color:#1e0010">$</span>NKcO3Tbem.3wte5tp5o.P6TDFxx5jaYu0lHFy9qNp4XehBGP<span style="color:#960050;background-color:#1e0010">/</span>69HwtOYaE<span style="color:#960050;background-color:#1e0010">/</span>s7PQPKKVCJZCnVJQh2A6.rN4oJ.<span style="color:#960050;background-color:#1e0010">:</span>18948<span style="color:#960050;background-color:#1e0010">:</span>0<span style="color:#960050;background-color:#1e0010">:</span>99999<span style="color:#960050;background-color:#1e0010">:</span>7<span style="color:#960050;background-color:#1e0010">:::</span>
+</span></span></code></pre></div><h1 id="用户分类">用户分类</h1>
 <ol>
 <li>root用户</li>
 <li>系统用户</li>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JavaScript on 小熊的博客</title>
+    <link>https://bearcurb.blog/tags/javascript/</link>
+    <description>Recent content in JavaScript on 小熊的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language><atom:link href="https://bearcurb.blog/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript 笔记</title>
+      <link>https://bearcurb.blog/posts/2023-7-30/javascript-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bearcurb.blog/posts/2023-7-30/javascript-notes/</guid>
+      <description>写在前面 本笔记是(MDN Web Docs的JavaScript教程)笔记
+语法和数据类型 JavaScript 是区分大小写的,并使用 Unicode 字符集
+früh 和 Früh 则是两个不同的变量
+在 JavaScript 中,指令被称为语句(Statement),并用分号(;)进行分隔(不写也可以)。
+变量和作用域 var 声明一个变量。 let 声明一个块作用域的局部变量。 const 声明一个块作用域的只读常量。 用 var 或 let 语句声明的变量,如果没有赋初始值,则其值为 undefined。
+作用域 全局变量 可被当前文件中任何地方的代码访问 局部变量 只能在当前函数内访问 变量提升 先使用变量稍后声明变量被成为变量提升,但是提升后的变量会返回undefined
+var声明的变量可以被正常用 console.log(x === undefined); // true var x = 3; let和const声明的变量会抛(ReferenceError) console.log(x); // ReferenceError let x = 3; 函数提升 函数声明会被提升,函数表达式不会被提升
+foo(); // &amp;#34;bar&amp;#34; function foo() { console.log(&amp;#34;bar&amp;#34;); } baz(); // 类型错误：baz 不是一个函数 var baz = function() { console.</description>
+    </item>
+    
+  </channel>
+</rss>

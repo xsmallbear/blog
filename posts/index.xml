@@ -37,5 +37,21 @@ less快捷键
 按键 效果 d/u 向下/上滚动半页（down/up） f/d 向下/上滚动一整页（forward/back） g / G 跳转到文件开头/结尾 j 向下移动一行 k 向上移动一行 /PATTERN 在文件中搜索 PATTERN n / N 跳转到下一个/上一个找到的 PATTERN q 退出 进程标识符(PID) 进程标识符(PID, Process Identifier)是一个数字,要对进程做任意操作需要使用这个PID nice和PRI nice 操作系统调度线程的优先程度 priority 操作系统内部使用的调度标志 $ nice -10 vim #use 10 nice run vim $ renice -n 10 -p 12345 # 设置pid12345的线程nice为-10 进程状态 Status: R: running #正在跑 S: sleeping #可以被中断的睡眠 T: traced/stopped #被跟踪/挂起的进程 Z: zombie #僵尸进程 D: disk sleep #不能被中断的睡眠 前后台切换 Ctrl+z 把程序挂在后台暂停执行</description>
     </item>
     
+    <item>
+      <title>JavaScript 笔记</title>
+      <link>https://bearcurb.blog/posts/2023-7-30/javascript-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bearcurb.blog/posts/2023-7-30/javascript-notes/</guid>
+      <description>写在前面 本笔记是(MDN Web Docs的JavaScript教程)笔记
+语法和数据类型 JavaScript 是区分大小写的,并使用 Unicode 字符集
+früh 和 Früh 则是两个不同的变量
+在 JavaScript 中,指令被称为语句(Statement),并用分号(;)进行分隔(不写也可以)。
+变量和作用域 var 声明一个变量。 let 声明一个块作用域的局部变量。 const 声明一个块作用域的只读常量。 用 var 或 let 语句声明的变量,如果没有赋初始值,则其值为 undefined。
+作用域 全局变量 可被当前文件中任何地方的代码访问 局部变量 只能在当前函数内访问 变量提升 先使用变量稍后声明变量被成为变量提升,但是提升后的变量会返回undefined
+var声明的变量可以被正常用 console.log(x === undefined); // true var x = 3; let和const声明的变量会抛(ReferenceError) console.log(x); // ReferenceError let x = 3; 函数提升 函数声明会被提升,函数表达式不会被提升
+foo(); // &amp;#34;bar&amp;#34; function foo() { console.log(&amp;#34;bar&amp;#34;); } baz(); // 类型错误：baz 不是一个函数 var baz = function() { console.</description>
+    </item>
+    
   </channel>
 </rss>
