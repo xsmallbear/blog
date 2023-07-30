@@ -1,6 +1,6 @@
 ---
 title: "JavaScript 笔记"
-date: 2023-7-30
+date: 2022-07-30
 type: "post"
 tags: ["JavaScript"]
 showTableOfContents: true
