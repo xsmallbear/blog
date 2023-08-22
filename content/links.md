@@ -53,7 +53,7 @@
         line-height:1.2;
     }
     .container .card{
-        width:250px;
+        width:240px;
         padding:5px;
         height:83px;
         border: 2px solid #909399;
