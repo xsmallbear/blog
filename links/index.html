@@ -17,26 +17,26 @@
     
 
     
-    <title>Posts</title>
+    <title>小熊的博客</title>
     <meta name="description" content="你好喵!">
     <meta name="keywords" content=''>
 
-    <meta property="og:url" content="https://bearcurb.blog/posts/">
+    <meta property="og:url" content="https://bearcurb.blog/links/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Posts">
+    <meta property="og:title" content="小熊的博客">
     <meta property="og:description" content="你好喵!">
     <meta property="og:image" content="https://bearcurb.blog/images/avatar.png">
     <meta property="og:image:secure_url" content="https://bearcurb.blog/images/avatar.png">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Posts">
+    <meta name="twitter:title" content="小熊的博客">
     <meta name="twitter:description" content="你好喵!">
-    <meta property="twitter:domain" content="https://bearcurb.blog/posts/">
-    <meta property="twitter:url" content="https://bearcurb.blog/posts/">
+    <meta property="twitter:domain" content="https://bearcurb.blog/links/">
+    <meta property="twitter:url" content="https://bearcurb.blog/links/">
     <meta name="twitter:image" content="https://bearcurb.blog/images/avatar.png">
 
     
-    <link rel="canonical" href="https://bearcurb.blog/posts/" />
+    <link rel="canonical" href="https://bearcurb.blog/links/" />
 
     <link rel="stylesheet" type="text/css" href="https://bearcurb.blog//css/normalize.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" type="text/css" href="https://bearcurb.blog//css/main.css">
@@ -146,34 +146,132 @@ setInterval(()=>{ emojisIndex = Math.floor(Math.random() * (emoticon.length)); c
     </nav>
 </header>
 <main id="content">
-    <div class="container list-posts">
-
-    <h1 class="list-title">Posts</h1>
-
     
 
-    <h2 class="posts-year">2023</h2><article class="post-title">
-    <a href="https://bearcurb.blog/posts/2023-7-30/javascript-notes/" class="post-link">JavaScript 笔记</a>
-    <div class="flex-break"></div>
-    <span class="post-date">July 30, 2023</span>
-</article>
+    <div class="post container">
 
-    
+    <div class="post-header-section">
+        <h1></h1>
+    </div>
 
-    <h2 class="posts-year">2022</h2><article class="post-title">
-    <a href="https://bearcurb.blog/posts/2022-10-28/sql-notes/" class="post-link">sql 笔记</a>
-    <div class="flex-break"></div>
-    <span class="post-date">October 28, 2022</span>
-</article>
-<article class="post-title">
-    <a href="https://bearcurb.blog/posts/2022-10-26/linux-notes/" class="post-link">Linux 避坑笔记</a>
-    <div class="flex-break"></div>
-    <span class="post-date">October 26, 2022</span>
-</article>
-
-    
-
+    <div class="post-content">
+        <p>
+            <div class="container">
+    <a class="card" href="#">
+        <img class="img" src="http://localhost:1313/images/avatar.png" alt="hi">
+        <div class="right">
+            <span class="name">SMALLBEAR</span>
+            <span class="remark">这个人天天发电，除了发电就是发电，大家不要和它玩</span>
+        </div>
+    </a>
+    <a class="card" href="#">
+        <img class="img" src="http://localhost:1313/images/avatar.png" alt="hi">
+        <div class="right">
+            <span class="name">SMALLBEAR</span>
+            <span class="remark">这个人天天发电，除了发电就是发电，大家不要和它玩</span>
+        </div>
+    </a>
+    <a class="card" href="#">
+        <img class="img" src="http://localhost:1313/images/avatar.png" alt="hi">
+        <div class="right">
+            <span class="name">SMALLBEAR</span>
+            <span class="remark">这个人天天发电，除了发电就是发电，大家不要和它玩</span>
+        </div>
+    </a>
+    <a class="card" href="#">
+        <img class="img" src="http://localhost:1313/images/avatar.png" alt="hi">
+        <div class="right">
+            <span class="name">SMALLBEAR</span>
+            <span class="remark">这个人天天发电，除了发电就是发电，大家不要和它玩</span>
+        </div>
+    </a>
+    <a class="card" href="#">
+        <img class="img" src="http://localhost:1313/images/avatar.png" alt="hi">
+        <div class="right">
+            <span class="name">SMALLBEAR</span>
+            <span class="remark">这个人天天发电，除了发电就是发电，大家不要和它玩</span>
+        </div>
+    </a>
 </div>
+<style>
+    .container{
+        width:100%;
+        height:100%;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap:wrap;
+        gap: 10px;
+        line-height:1.2;
+    }
+    .container .card{
+        width:250px;
+        padding:5px;
+        height:83px;
+        border: 2px solid #909399;
+        border-radius:15px;
+        display:flex;
+        text-decoration:none;
+        gap: 5px;
+    }
+
+
+    .container .card:hover{
+        border: 2px solid #FF4D4D;
+    }
+
+    .container .card .img{
+        border-radius:10px;
+        width:83px;
+        height:83px;
+    }
+    
+    .container .card .right{
+        height:100%;
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: 5px;
+    }
+    .container .card .right .name{
+        text-align:center;
+        font-size:20px;
+        font-weight:900;
+    }
+    
+    .container .card .right .remark{
+        max-height:100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size:13.6px;
+        font-weight:300;
+    }
+</style>
+<pre tabindex="0"><code>这他妈是个友链！卧槽
+这他妈是个友链！卧槽
+这他妈是个友链！卧槽
+这他妈是个友链！卧槽
+这他妈是个友链！卧槽
+这他妈是个友链！卧槽
+这他妈是个友链！卧槽
+这他妈是个友链！卧槽
+这他妈是个友链！卧槽
+这他妈是个友链！卧槽
+这他妈是个友链！卧槽
+这他妈是个友链！卧槽
+这他妈是个友链！卧槽
+这他妈是个友链！卧槽
+这他妈是个友链！卧槽
+这他妈是个友链！卧槽
+</code></pre>
+        </p>
+    </div>
+</div>
+
+
 
 
         </main><footer class="footer">

@@ -53,5 +53,14 @@ less快捷键
 按键 效果 d/u 向下/上滚动半页（down/up） f/d 向下/上滚动一整页（forward/back） g / G 跳转到文件开头/结尾 j 向下移动一行 k 向上移动一行 /PATTERN 在文件中搜索 PATTERN n / N 跳转到下一个/上一个找到的 PATTERN q 退出 进程标识符(PID) 进程标识符(PID, Process Identifier)是一个数字,要对进程做任意操作需要使用这个PID nice和PRI nice 操作系统调度线程的优先程度 priority 操作系统内部使用的调度标志 $ nice -10 vim #use 10 nice run vim $ renice -n 10 -p 12345 # 设置pid12345的线程nice为-10 进程状态 Status: R: running #正在跑 S: sleeping #可以被中断的睡眠 T: traced/stopped #被跟踪/挂起的进程 Z: zombie #僵尸进程 D: disk sleep #不能被中断的睡眠 前后台切换 Ctrl+z 把程序挂在后台暂停执行</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://bearcurb.blog/links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bearcurb.blog/links/</guid>
+      <description> SMALLBEAR 这个人天天发电，除了发电就是发电，大家不要和它玩 SMALLBEAR 这个人天天发电，除了发电就是发电，大家不要和它玩 SMALLBEAR 这个人天天发电，除了发电就是发电，大家不要和它玩 SMALLBEAR 这个人天天发电，除了发电就是发电，大家不要和它玩 SMALLBEAR 这个人天天发电，除了发电就是发电，大家不要和它玩 这他妈是个友链！卧槽 这他妈是个友链！卧槽 这他妈是个友链！卧槽 这他妈是个友链！卧槽 这他妈是个友链！卧槽 这他妈是个友链！卧槽 这他妈是个友链！卧槽 这他妈是个友链！卧槽 这他妈是个友链！卧槽 这他妈是个友链！卧槽 这他妈是个友链！卧槽 这他妈是个友链！卧槽 这他妈是个友链！卧槽 这他妈是个友链！卧槽 这他妈是个友链！卧槽 这他妈是个友链！卧槽 </description>
+    </item>
+    
   </channel>
 </rss>
