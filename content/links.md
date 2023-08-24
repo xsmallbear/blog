@@ -96,7 +96,7 @@
     .container .card .right .remark{
         overflow: hidden;
         text-overflow: ellipsis;
-        font-size:12.3px;
+        font-size:12.4px;
         font-weight:300;
     }
 </style>
