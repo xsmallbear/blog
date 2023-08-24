@@ -19,7 +19,7 @@
         </div>
     </a>
         <a class="card" href="https://coldin.top" target="_blank">
-        <img class="img" src="ttps://coldin.top/avatar.png" alt="NoData">
+        <img class="img" src="https://coldin.top/avatar.png" alt="NoData">
         <div class="right">
             <span class="name">酷丁的主页</span>
             <span class="remark">一个羞涩的小朋友的自我介绍页面</span>
