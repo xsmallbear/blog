@@ -22,7 +22,7 @@
         <img class="img" src="https://gitee.com/xiaomouz/xiaomouz/raw/master/upload/images/06bcb167ff840.jpg" alt="NoData">
         <div class="right">
             <span class="name">小莫のBase</span>
-            <span class="remark">这个人天天发电，除了发电就是发电，大家不要和它玩</span>
+            <span class="remark">小小少年，没有烦恼。</span>
         </div>
     </a>
 </div>
@@ -87,4 +87,4 @@
     }
 </style>
 
-喵！
+喵~
