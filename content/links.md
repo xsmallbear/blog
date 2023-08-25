@@ -57,6 +57,8 @@
     }
 
     .container .card .img{
+        padding:0px;
+        margin:0px;
         border-radius:10px;
         width:83px;
         height:83px;
